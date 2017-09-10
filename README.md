@@ -2,10 +2,12 @@
 
 
 #Summary
+
 This data visualization is a map of the distribution of prosper loan data across the United States. The color density in the map tells the median of debt to income ratio in different states. In the interaction part, when you put your mouse over, you will see the median credit score in the selected state.The selected state is also highlighted.  
 
 
 #Design
+
 The original data set contains over 80 variables and almost 100,000 instances. The variables include numerial and categorical data. I selected the two factors that I am interested in: the debt to income ratio and the range of the credit score. I am interested in looking at people in which state tend to use more money than their income and their credit score. Therefore, the way I am looking at these two factors is to group them by state. I transformed the data a little bit and find the median of debt to income ratio and the median of average credit score in each state. Then I used a us-state map to fit the data in. 
 Since the color density can represent numerical degree and color red is usally used to represent "deficit financing"， I use red color to represent the high debt to income ratio and white to represent low debt to income ratio. 
 I also designed an interaction so that my audience can find the median of credit score of the state to their interest after they find the debt to income ratio is extremely high or low. 
