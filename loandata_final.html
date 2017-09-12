@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js">
+  "use strict";
+</script>
 <style type="text/css">
 
 /* On mouse hover, lighten state color */
@@ -14,7 +16,7 @@ path:hover {
 div.tooltip {   
     position: absolute;           
     text-align: center;           
-    width: 60px;                  
+    width: 80px;                  
     height: 28px;                 
     padding: 2px;             
     font: 12px sans-serif;        
@@ -82,7 +84,7 @@ svg.append("text")
     .attr("text-anchor", "middle")
     .style("font-size", "16px")
     .style("text-decoration", "underline")
-    .text("Prosper Loan Data-- medians of Debt Ratio and Credit in different states")
+    .text("Lower Debt to Income Ratio DOES NOT Guarantee Higher Credit Score in U.S.")
 
 
 svg.append("text")
@@ -161,6 +163,24 @@ d3.csv("loandata_state.csv", function(data) {
         div.transition()
             .duration(500)
             .style("opacity", 0);
+
+
+    //add names of states to the map
+      svg.selectAll("text")
+      .data(json.features)
+      .enter()
+      .append("svg:text")
+      .text(function(d){
+        return d.properties.name;
+      })
+      .attr("x", function(d){
+        return path.centroid(d)[0];
+      })
+      .attr("y", function(d){
+        return  path.centroid(d)[1];
+      })
+      .attr("text-anchor","middle")
+      .attr('font-size','6pt');
 
        });
         // add a legend
