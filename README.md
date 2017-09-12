@@ -16,19 +16,25 @@ I also designed an interaction so that my audience can find the median of credit
 #Feedbacks
 
 Feedback 1 - Ricky LU
+
 Feedback point 1.Map is clear and fancy. The middle part is extremely red.
-Feedback point 2. The visualization only contains Debt to Income Ratio. The information is not very rich,
+
+Feedback point 2. The visualization only contains Debt to Income Ratio. The information is not very rich.
+
 Follow-up: I added a second variable, i.e. the median of credit scores of people in the state. 
 
 Feedback 2 - Zhongliang Huang
 
 Feedback point 1.Color red is really catching eyeball. 
+
 Feedback point 2. The display is not accurate compared with the original data. Colorado looks lighter than California but actually most people in colorado have higher debt to income ratio than people in California. 
+
 Follow-up: I aggregated the data by states and calculated the median of debt to income ratio and the median of credit score in R and use the new transformed data in the data visualization. 
 
 Feedback 3 - Jialu Peng
 
 Feedback point 1. The title is not clear enough to tell others what the map is about. 
+
 Feedback point 2. It is easy to find information in California but not as much obvious in other states that I am unfamiliar with.
 
 Follow-up: I changed the title to a clear one: Lower Debt to Income Ratio DOES NOT Guarantee Higher Credit Score in U.S.In addition, I added the names of states to the map.
